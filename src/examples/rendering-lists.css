@@ -1,0 +1,44 @@
+@import '@radix-ui/colors/pink.css';
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/red.css";
+.rendering-lists {
+    h4 {
+        color: black;
+    }
+}
+
+.list {
+    padding: 2rem;
+}
+
+.list-item {
+    color: var(--pink-12);
+}
+
+.button {
+    cursor: pointer;
+    border-radius: 1rem;
+    outline: 1px solid black;
+    margin: .5rem;
+    padding: .5rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: .25rem;
+    width: .25rem;
+}
+
+.li-container {
+    display: flex;
+    min-width: auto;
+    flex-wrap: nowrap;
+    align-items: center;
+    span {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+    }
+}
