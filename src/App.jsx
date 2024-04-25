@@ -7,9 +7,7 @@ import JsxApi from "./examples/jsx-api.jsx";
 import RenderingLists from "./examples/rendering-lists.jsx";
 import Interactivity from "./examples/interactivity.jsx";
 export default function App() {
-  const [tab, setTab] = useState(
-    new URL(window.location.href).searchParams.get("tab") ?? "01",
-  );
+  const [tab, setTab] = useState("01");
   useEffect(() => {
     history.replaceState({}, "", "?" + new URLSearchParams({ tab }).toString());
   }, [tab]);
