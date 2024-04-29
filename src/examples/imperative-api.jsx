@@ -1,6 +1,6 @@
 import React from "react";
 
-const DeclarativeApi = () => {
+const ImperativeApi = () => {
   // We are creating an element, similarly to what we would use with plain Javascript
   const p = React.createElement(
     "p",
@@ -43,4 +43,4 @@ const DeclarativeApi = () => {
   return parent;
 };
 
-export default DeclarativeApi;
+export default ImperativeApi;

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import "./index.css";
 
-import DeclarativeApi from "./examples/declarative-api.jsx";
+import ImperativeApi from "./examples/imperative-api.jsx";
 import JsxApi from "./examples/jsx-api.jsx";
 import RenderingLists from "./examples/rendering-lists.jsx";
 import Interactivity from "./examples/interactivity.jsx";
@@ -18,9 +18,9 @@ export default function App() {
       value={tab}
       onValueChange={setTab}
     >
-      <Tabs.List className="TabsList" aria-label="Manage your account">
+      <Tabs.List className="TabsList">
         <Tabs.Trigger className="TabsTrigger" value="01">
-          React Declarative API
+          React Imperative API
         </Tabs.Trigger>
         <Tabs.Trigger className="TabsTrigger" value="02">
           JSX API
@@ -33,7 +33,7 @@ export default function App() {
         </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content className="TabsContent" value="01">
-        <DeclarativeApi />
+        <ImperativeApi />
       </Tabs.Content>
       <Tabs.Content className="TabsContent" value="02">
         <JsxApi />
