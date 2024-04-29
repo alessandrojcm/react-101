@@ -18,7 +18,7 @@ const Button = (props) => {
 
 const JsxApi = () => {
   // Usage of the Button component using JSX
-  // Can you create a component that reuses the Button component, with the button inside a box, with some text over it?
+  // Can you make the code below into a reusable component? that takes the content inside the h1 tag as a prop?
   // Ie:
   // |-----------------|
   // |   Text as props |
@@ -26,6 +26,7 @@ const JsxApi = () => {
   // |_________________|
   return (
     <div>
+      <h1>I am a title</h1>
       <Button />
       <Button
         onClick={() => alert("Goodbye")}

@@ -43,7 +43,7 @@ const ListItem = ({ item, color, onRemove }) => {
 };
 
 const Interactivity = ({ items = shoppingList }) => {
-  // Store the items prop as state so we can manipulate it, as the data flow is top-down
+  // Store the items prop as state, so we can manipulate it, as the data flow is top-down
   const [shopping, setShopping] = useState(items);
   return (
     <div>
