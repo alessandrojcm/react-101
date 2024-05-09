@@ -7,6 +7,10 @@ const base = process.env.BASE || "/";
 // Create http server
 const app = express();
 
+const props = JSON.stringify({
+  hi: "I am a prop",
+});
+
 // Add Vite or respective production middlewares
 let vite;
 const { createServer } = await import("vite");
@@ -36,7 +40,8 @@ app.use("*", async (req, res) => {
     // Replace placeholder with the actual content
     const html = template
       .replace(`<!--app-head-->`, rendered.head ?? "")
-      .replace(`<!--app-html-->`, rendered.html ?? "");
+      .replace(`<!--app-html-->`, rendered.html ?? "")
+      .replace(`<!--__SSR_PROPS__-->`, `window.__SSR_PROPS__=${props}`);
 
     res.status(200).set({ "Content-Type": "text/html" }).send(html);
   } catch (e) {

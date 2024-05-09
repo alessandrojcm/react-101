@@ -6,7 +6,7 @@ import ImperativeApi from "./examples/imperative-api.jsx";
 import JsxApi from "./examples/jsx-api.jsx";
 import RenderingLists from "./examples/rendering-lists.jsx";
 import Interactivity from "./examples/interactivity.jsx";
-export default function App() {
+export default function App(props) {
   const [tab, setTab] = useState("01");
   useEffect(() => {
     history.replaceState({}, "", "?" + new URLSearchParams({ tab }).toString());
@@ -31,6 +31,9 @@ export default function App() {
         <Tabs.Trigger className="TabsTrigger" value="04">
           Interactivity
         </Tabs.Trigger>
+        <Tabs.Trigger className="TabsTrigger" value="05">
+          Server Props
+        </Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content className="TabsContent" value="01">
         <ImperativeApi />
@@ -43,6 +46,9 @@ export default function App() {
       </Tabs.Content>
       <Tabs.Content className="TabsContent" value="04">
         <Interactivity />
+      </Tabs.Content>
+      <Tabs.Content className="TabsContent" value="05">
+        Props from the server: <code>{JSON.stringify(props)}</code>
       </Tabs.Content>
     </Tabs.Root>
   );

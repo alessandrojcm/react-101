@@ -7,6 +7,6 @@ import App from "./src/App.jsx";
 ReactDOM.hydrateRoot(
   document.getElementById("root"),
   <React.StrictMode>
-    <App />
+    <App {...(window?.__SSR_PROPS__ ?? {})} />
   </React.StrictMode>,
 );
